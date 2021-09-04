@@ -4,6 +4,6 @@ import { BasicExternalLink } from './external_link.composition';
 
 it('should render with the correct text', () => {
   const { getByText } = render(<BasicExternalLink />);
-  const rendered = getByText('hello from ExternalLink');
+  const rendered = getByText('Hello');
   expect(rendered).toBeTruthy();
 });
