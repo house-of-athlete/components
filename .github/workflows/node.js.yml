@@ -1,0 +1,40 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Configure PATH
+        run: |
+          echo "$(yarn global bin)" >> $GITHUB_PATH
+          echo "$HOME/bin" >> $GITHUB_PATH
+
+      - name: Install Bit
+        run: |
+          yarn global add @teambit/bvm
+          bvm install 0.0.502
+          bit config set user.token $HOA_BIT_TOKEN
+        env:
+          HOA_BIT_TOKEN: ${{ secrets.BIT_TOKEN }}
+
+      - run: bit install
+      - run: bit compile
+      - run: bit test
+      - run: bit lint
+      - run: npx prettier --check hoa
