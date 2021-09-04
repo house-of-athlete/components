@@ -9,5 +9,11 @@
  */
 
 {
+    "ui/external_link": {
+        "scope": "hoa-brian.hoa",
+        "version": "0.0.1",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/external_link"
+    },
     "$schema-version": "14.9.0"
 }

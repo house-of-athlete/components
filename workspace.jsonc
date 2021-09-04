@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "my-scope"
+    "defaultScope": "hoa-brian.hoa"
   },
   /**
    * main configuration for component dependency resolution.
@@ -38,9 +38,22 @@
      */
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
-      "dependencies": {},
-      "peerDependencies": {}
-    }
+      "dependencies": {
+        "@testing-library/react": "12.0.0"
+      },
+      "peerDependencies": {
+        "prop-types": "15.7.2",
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
+      }
+    },
+    "packageManagerArgs": [],
+    "devFilePatterns": [
+      "**/*.spec.ts"
+    ],
+    "strictPeerDependencies": true,
+    "installFromBitDevRegistry": true,
+    "savePrefix": ""
   },
   /**
    * workspace variants allow to set different subsets of configuration for components in your
@@ -57,7 +70,7 @@
       /**
        * uncomment to apply the chosen environment on all components.
        **/
-      // "teambit.react/react": { }
+      "teambit.react/react": {}
     }
   }
 }
