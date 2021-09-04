@@ -10,7 +10,7 @@
 
 {
     "ui/external_link": {
-        "scope": "hoa-brian.hoa",
+        "scope": "hoa.hoa",
         "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/external_link"
