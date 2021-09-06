@@ -28,7 +28,7 @@ jobs:
       - name: Install Bit
         run: |
           yarn global add @teambit/bvm
-          bvm install 0.0.502
+          bvm install 0.0.504
           bit config set user.token $HOA_BIT_TOKEN
         env:
           HOA_BIT_TOKEN: ${{ secrets.BIT_TOKEN }}
