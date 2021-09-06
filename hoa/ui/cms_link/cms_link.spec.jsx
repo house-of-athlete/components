@@ -4,6 +4,6 @@ import { BasicCmsLink } from './cms_link.composition';
 
 it('should render with the correct text', () => {
   const { getByText } = render(<BasicCmsLink />);
-  const rendered = getByText('hello from CmsLink');
+  const rendered = getByText('hello from CMSLink');
   expect(rendered).toBeTruthy();
 });

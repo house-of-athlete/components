@@ -1,24 +1,50 @@
 ---
-description: 'A CmsLink component.'
-labels: ['label1', 'label2', 'label3']
+description: 'MSLink component.'
+labels: []
 ---
 
-import { CmsLink } from './cms_link';
+import { CMSLink } from './cms_link';
+CMSLink.getInternalLink = (link) => [
+  (props) => <a {...props} />,
+  { href: link.document.path.current, children: 'Internal Link' },
+];
 
-## React Component for rendering text
+## Configuration
 
-A basic div that renders some text
-
-### Component usage
+FIXME configure for Gatsby
 
 ```js
-<CmsLink text="hello from CmsLink" />
+CMSLink.getInternalLink = (link) => [
+  (props) => <a {...props} />,
+  { href: '/', children: 'Internal Link' },
+];
 ```
 
-### Using props to customize the text
+## Component usage
 
-Modify the text to see it change live:
+See compositions for examples of styling links and using render props.
+
+### External Link
 
 ```js live
-<CmsLink text="hello from CmsLink" />
+<CMSLink link={{ _type: 'externalLink', url: 'http://example.com' }}>
+  External Link
+</CMSLink>
+```
+
+### Internal Link
+
+```js live
+<CMSLink
+  link={{
+    _key: 'd3d49d559627',
+    _type: 'internalLink',
+    document: {
+      _type: 'collection',
+      path: { _type: 'slug', current: '/apparel' },
+    },
+  }}
+>
+  Internal Link
+</CMSLink>
 ```

@@ -1,1 +1,1 @@
-export { CmsLink } from './cms_link';
+export { CMSLink } from './cms_link';

@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-// import { Link } from 'gatsby';
 import { ExternalLink } from '@hoa/hoa.ui.external_link';
-// import internalLinkPath from '../../lib/internalLinkPath';
 import { isFunction, pick } from 'lodash';
 
 const getComponentAndProps = (link) => {
@@ -11,8 +9,13 @@ const getComponentAndProps = (link) => {
       return [ExternalLink, { href: link.url }];
 
     case 'internalLink':
-      // return [Link, { to: internalLinkPath(link.document) }];
-      return <div>FIXME link</div>;
+      if (!isFunction(CMSLink.getInternalLink)) {
+        throw new Error(
+          `CMSLink.getInternalLink not set; see https://bit.dev/hoa/hoa/ui/cms_link`
+        );
+      }
+
+      return CMSLink.getInternalLink(link);
 
     default:
       throw new Error(`unknown link object: ${JSON.stringify(link)}`);
