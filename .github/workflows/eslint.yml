@@ -1,3 +1,5 @@
+# See eslint/README.md for explanation
+
 name: ESLint CI
 
 on: [push]
