@@ -10,8 +10,8 @@
 
 {
     "klaviyo/sign_up_for_back_in_stock": {
-        "scope": "",
-        "version": "",
+        "scope": "hoa.hoa",
+        "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/klaviyo/sign_up_for_back_in_stock"
     },
