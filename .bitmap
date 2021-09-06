@@ -9,6 +9,12 @@
  */
 
 {
+    "klaviyo/sign_up_for_back_in_stock": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/klaviyo/sign_up_for_back_in_stock"
+    },
     "ui/cms_link": {
         "scope": "hoa.hoa",
         "version": "0.0.2",
