@@ -17,5 +17,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - run: cp -R hoa eslint/
       - run: cd eslint && yarn install
       - run: cd eslint && yarn lint
