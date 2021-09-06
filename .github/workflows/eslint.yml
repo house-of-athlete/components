@@ -1,0 +1,24 @@
+# See eslint/README.md for explanation
+
+name: ESLint CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: cp -R hoa eslint/
+      - run: cd eslint && yarn install
+      - run: cd eslint && yarn lint
