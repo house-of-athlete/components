@@ -26,6 +26,7 @@ it('should render CMSLink with internal link', () => {
   const rendered = getByText('Internal Link');
 
   expect(rendered).toBeTruthy();
+  expect(rendered.tagName).toEqual('A');
   expect(rendered.href).toEqual('http://localhost/apparel');
   expect(rendered.rel).toEqual('');
   expect(rendered.target).toEqual('');
@@ -36,6 +37,7 @@ it('should render RedExternalLink', () => {
   const rendered = getByText('External Link');
 
   expect(rendered).toBeTruthy();
+  expect(rendered.tagName).toEqual('A');
   expect(rendered.href).toEqual('http://example.com/');
   expect(rendered.rel).toEqual('noopener noreferrer');
   expect(rendered.target).toEqual('_blank');
