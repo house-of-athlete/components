@@ -32,6 +32,15 @@ it('should render CMSLink with internal link', () => {
   expect(rendered.target).toEqual('');
 });
 
+it('should render optional link', () => {
+  const { getByText } = render(<CMSLink isOptional>Optional Link</CMSLink>);
+  const rendered = getByText('Optional Link');
+
+  expect(rendered).toBeTruthy();
+  expect(rendered.tagName).toEqual('SPAN');
+  expect(rendered.href).toBeUndefined();
+});
+
 it('should render RedExternalLink', () => {
   const { getByText } = render(<RedExternalLink />);
   const rendered = getByText('External Link');
