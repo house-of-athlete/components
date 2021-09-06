@@ -1,23 +1,23 @@
 ---
-description: 'MSLink component.'
+description: "MSLink component."
 labels: []
 ---
 
-import { CMSLink } from './cms_link';
-CMSLink.getInternalLink = (link) => [
-  (props) => <a {...props} />,
-  { href: link.document.path.current, children: 'Internal Link' },
-];
+import { CMSLink } from "./cms_link"
+CMSLink.getInternalLink = link => [
+  props => <a {...props} />,
+  { href: link.document.path.current, children: "Internal Link" },
+]
 
 ## Configuration
 
 FIXME configure for Gatsby
 
 ```js
-CMSLink.getInternalLink = (link) => [
-  (props) => <a {...props} />,
-  { href: '/', children: 'Internal Link' },
-];
+CMSLink.getInternalLink = link => [
+  props => <a {...props} />,
+  { href: "/", children: "Internal Link" },
+]
 ```
 
 ## Component usage
@@ -27,7 +27,7 @@ See compositions for examples of styling links and using render props.
 ### External Link
 
 ```js live
-<CMSLink link={{ _type: 'externalLink', url: 'http://example.com' }}>
+<CMSLink link={{ _type: "externalLink", url: "http://example.com" }}>
   External Link
 </CMSLink>
 ```
@@ -37,11 +37,11 @@ See compositions for examples of styling links and using render props.
 ```js live
 <CMSLink
   link={{
-    _key: 'd3d49d559627',
-    _type: 'internalLink',
+    _key: "d3d49d559627",
+    _type: "internalLink",
     document: {
-      _type: 'collection',
-      path: { _type: 'slug', current: '/apparel' },
+      _type: "collection",
+      path: { _type: "slug", current: "/apparel" },
     },
   }}
 >
