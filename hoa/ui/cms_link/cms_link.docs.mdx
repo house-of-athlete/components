@@ -11,13 +11,15 @@ CMSLink.getInternalLink = link => [
 
 ## Configuration
 
-FIXME configure for Gatsby
+You will need to configure the `getInternalLink` function, which is used to generate internal
+links in your project. Here is an example configuration for use with Gatsby:
 
 ```js
-CMSLink.getInternalLink = link => [
-  props => <a {...props} />,
-  { href: "/", children: "Internal Link" },
-]
+import { Link } from "gatsby"
+import { CMSLink } from "@hoa/hoa.ui.cms_link"
+import internalLinkPath from "./src/lib/internalLinkPath"
+
+CMSLink.getInternalLink = link => [Link, { to: link.document.path.current }]
 ```
 
 ## Component usage
