@@ -9,6 +9,12 @@
  */
 
 {
+    "ui/cms_link": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/cms_link"
+    },
     "ui/external_link": {
         "scope": "hoa.hoa",
         "version": "0.0.1",
