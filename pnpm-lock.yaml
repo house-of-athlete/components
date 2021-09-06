@@ -10,7 +10,7 @@ importers:
       '@testing-library/react': registry.npmjs.org/@testing-library/react/12.0.0_react-dom@17.0.2+react@17.0.2
       '@types/jest': registry.npmjs.org/@types/jest/26.0.24
       '@types/node': registry.npmjs.org/@types/node/12.20.4
-      '@types/react': registry.npmjs.org/@types/react/17.0.19
+      '@types/react': registry.npmjs.org/@types/react/17.0.20
       '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.9
       '@types/testing-library__jest-dom': registry.npmjs.org/@types/testing-library__jest-dom/5.9.5
     specifiers:
@@ -18,13 +18,15 @@ importers:
       '@testing-library/react': 12.0.0
       '@types/jest': ^26.0.24
       '@types/node': 12.20.4
-      '@types/react': ^17.0.19
+      '@types/react': ^17.0.20
       '@types/react-dom': ^17.0.9
       '@types/testing-library__jest-dom': 5.9.5
       core-js: ^3.17.2
       prop-types: 15.7.2
-      react: ^17.0.2
-      react-dom: ^17.0.2
+      react: 17.0.2
+      react-dom: 17.0.2
+  hoa/ui/cms_link:
+    specifiers: {}
   hoa/ui/external_link:
     specifiers: {}
 lockfileVersion: 5.2
@@ -223,7 +225,7 @@ packages:
     version: 15.7.4
   registry.npmjs.org/@types/react-dom/17.0.9:
     dependencies:
-      '@types/react': registry.npmjs.org/@types/react/17.0.19
+      '@types/react': registry.npmjs.org/@types/react/17.0.20
     dev: true
     name: '@types/react-dom'
     resolution:
@@ -231,7 +233,7 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@types/react-dom/-/react-dom-17.0.9.tgz
     version: 17.0.9
-  registry.npmjs.org/@types/react/17.0.19:
+  registry.npmjs.org/@types/react/17.0.20:
     dependencies:
       '@types/prop-types': registry.npmjs.org/@types/prop-types/15.7.4
       '@types/scheduler': registry.npmjs.org/@types/scheduler/0.16.2
@@ -239,10 +241,10 @@ packages:
     dev: true
     name: '@types/react'
     resolution:
-      integrity: sha512-sX1HisdB1/ZESixMTGnMxH9TDe8Sk709734fEQZzCV/4lSu9kJCPbo2PbTRoZM+53Pp0P10hYVyReUueGwUi4A==
+      integrity: sha512-wWZrPlihslrPpcKyCSlmIlruakxr57/buQN1RjlIeaaTWDLtJkTtRW429MoQJergvVKc4IWBpRhWw7YNh/7GVA==
       registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/@types/react/-/react-17.0.19.tgz
-    version: 17.0.19
+      tarball: https://registry.npmjs.org/@types/react/-/react-17.0.20.tgz
+    version: 17.0.20
   registry.npmjs.org/@types/scheduler/0.16.2:
     dev: true
     name: '@types/scheduler'
