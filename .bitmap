@@ -9,6 +9,12 @@
  */
 
 {
+    "klaviyo/klaviyo": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/klaviyo/klaviyo"
+    },
     "ui/cms_link": {
         "scope": "hoa.hoa",
         "version": "0.0.2",
