@@ -8,6 +8,6 @@
     "eslint-plugin-react": "^7.25.1"
   },
   "scripts": {
-    "lint": "NODE_ENV=test eslint --ext .js,.jsx --max-warnings 0 ../hoa"
+    "lint": "NODE_ENV=test eslint --ext .js,.jsx --max-warnings 0 ./hoa"
   }
 }
