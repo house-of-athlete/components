@@ -1,1 +1,1 @@
-export { signUpForBackInStock, subscribeToMailingList } from "./cms_link"
+export { signUpForBackInStock, subscribeToMailingList } from "./klaviyo"
