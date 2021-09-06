@@ -1,0 +1,13 @@
+{
+  "name": "eslint",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.25.1"
+  },
+  "scripts": {
+    "lint": "NODE_ENV=test eslint --ext .js,.jsx --max-warnings 0 ../hoa"
+  }
+}
