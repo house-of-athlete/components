@@ -36,5 +36,4 @@ jobs:
       - run: bit install
       - run: bit compile
       - run: bit test
-      - run: bit lint
       - run: npx prettier --check hoa
