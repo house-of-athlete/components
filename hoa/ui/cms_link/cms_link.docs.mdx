@@ -17,7 +17,6 @@ links in your project. Here is an example configuration for use with Gatsby:
 ```js
 import { Link } from "gatsby"
 import { CMSLink } from "@hoa/hoa.ui.cms_link"
-import internalLinkPath from "./src/lib/internalLinkPath"
 
 CMSLink.getInternalLink = link => [Link, { to: link.document.path.current }]
 ```
