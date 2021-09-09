@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
- **/ {
+ **/{
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -42,6 +42,9 @@
         "@testing-library/react": "12.0.0"
       },
       "peerDependencies": {
+        "@emotion/react": "11.4.1",
+        "@emotion/styled": "11.3.0",
+        "lodash": "4.17.21",
         "prop-types": "15.7.2",
         "react": "17.0.2",
         "react-dom": "17.0.2"

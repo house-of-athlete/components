@@ -1,0 +1,60 @@
+---
+description: "CMSLink component."
+labels: []
+---
+
+import { CMSLink } from "./cms_link"
+CMSLink.getInternalLink = link => [
+  props => <a {...props} />,
+  { href: link.document.path.current, children: "Internal Link" },
+]
+
+## Configuration
+
+You will need to configure the `getInternalLink` function, which is used to generate internal
+links in your project. Here is an example configuration for use with Gatsby:
+
+```js
+import { Link } from "gatsby"
+import { CMSLink } from "@hoa/hoa.ui.cms_link"
+import internalLinkPath from "./src/lib/internalLinkPath"
+
+CMSLink.getInternalLink = link => [Link, { to: link.document.path.current }]
+```
+
+## Component usage
+
+See compositions for examples of styling links and using render props.
+
+### External Link
+
+```js live
+<CMSLink link={{ _type: "externalLink", url: "http://example.com" }}>
+  External Link
+</CMSLink>
+```
+
+### Internal Link
+
+```js live
+<CMSLink
+  link={{
+    _key: "d3d49d559627",
+    _type: "internalLink",
+    document: {
+      _type: "collection",
+      path: { _type: "slug", current: "/apparel" },
+    },
+  }}
+>
+  Internal Link
+</CMSLink>
+```
+
+### Optional Link
+
+```js live
+<CMSLink isOptional>
+  A <code>CMSLink</code> with no link is just a <code>span</code>
+</CMSLink>
+```
