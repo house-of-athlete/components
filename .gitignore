@@ -10,6 +10,6 @@ yarn-debug.log*
 yarn-error.log*
 /.changelog
 .npm/
-yarn.lock
+/yarn.lock
 .bit/
 public/
