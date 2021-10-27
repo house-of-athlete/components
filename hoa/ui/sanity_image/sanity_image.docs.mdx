@@ -1,17 +1,18 @@
 ---
-description: "A SanityImage component."
-labels: ["label1", "label2", "label3"]
+description: "Renders a responsive image from Sanity CMS."
+labels: []
 ---
 
 import { FullWidthSanityImage } from "./sanity_image"
 
-## React Component for rendering text
+## SanityImage
 
-A basic div that renders some text
+Renders a responsive image from Sanity CMS. The image will have the `width` and `height`
+attributes set such that the aspect ratio is maintained while the page loads [to avoid layout
+shift](https://developer.mozilla.org/en-US/docs/Web/Media/images/aspect_ratio_mapping).
+Furthermore, the image will have a placeholder background color set.
 
-### Using props to customize the text
-
-Modify the text to see it change live:
+### Example
 
 ```js live
 <FullWidthSanityImage
