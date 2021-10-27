@@ -22,14 +22,14 @@
         "rootDir": "hoa/ui/external_link"
     },
     "ui/sanity_image": {
-        "scope": "",
-        "version": "",
+        "scope": "hoa.hoa",
+        "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/sanity_image"
     },
     "ui/use_full_width_sizes": {
-        "scope": "",
-        "version": "",
+        "scope": "hoa.hoa",
+        "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/use_full_width_sizes"
     },
