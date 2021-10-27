@@ -27,5 +27,11 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/sanity_image"
     },
+    "ui/use_full_width_sizes": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/use_full_width_sizes"
+    },
     "$schema-version": "14.9.0"
 }
