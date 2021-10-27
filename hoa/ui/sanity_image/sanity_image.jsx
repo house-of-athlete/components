@@ -7,8 +7,8 @@ import React, {
   useState,
 } from "react"
 import styled from "@emotion/styled"
-import useFullWidthSizes from "../hooks/useFullWidthSizes"
-import { sanityImageUrl } from "../lib/sanityUtil"
+import { useFullWidthSizes } from "./useFullWidthSizes"
+import { sanityImageUrl } from "./sanityUtil"
 
 export const ImgLoadingContext = createContext()
 
@@ -19,7 +19,7 @@ const breakpoints = [
 const sanitySourceSet = baseUrl =>
   breakpoints.map(w => `${sanityImageUrl(baseUrl, { w })} ${w}w`).join(", ")
 
-const SanityImage = ({
+export const SanityImage = ({
   alt = "",
   className,
   image,
@@ -84,8 +84,6 @@ SanityImage.propTypes = {
   sizes: PropTypes.string,
   title: PropTypes.string,
 }
-
-export default SanityImage
 
 /**
  * For rendering responsive images with fluid width. See "The Fluid- And Variable-Sized-Image Use

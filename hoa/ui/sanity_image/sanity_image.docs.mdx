@@ -1,22 +1,40 @@
 ---
-description: 'A SanityImage component.'
-labels: ['label1', 'label2', 'label3']
+description: "A SanityImage component."
+labels: ["label1", "label2", "label3"]
 ---
 
-import { SanityImage } from './sanity_image';
+import { FullWidthSanityImage } from "./sanity_image"
 
 ## React Component for rendering text
 
 A basic div that renders some text
 
-### Component usage
-```js
-<SanityImage text="hello from SanityImage" />
-```
-
 ### Using props to customize the text
 
 Modify the text to see it change live:
+
 ```js live
-<SanityImage text="hello from SanityImage" />
+<FullWidthSanityImage
+  image={{
+    _id: "image-25f8378b9852da303afa2fd2c16b4a9f83aa9521-600x550-jpg",
+    metadata: {
+      dimensions: {
+        _type: "sanity.imageDimensions",
+        aspectRatio: 1.0909090909090908,
+        height: 550,
+        width: 600,
+      },
+      palette: {
+        dominant: {
+          _type: "sanity.imagePaletteSwatch",
+          background: "#7c7d80",
+          foreground: "#fff",
+          population: 7.01,
+          title: "#fff",
+        },
+      },
+    },
+    url: "https://cdn.sanity.io/images/xriwku0s/production/25f8378b9852da303afa2fd2c16b4a9f83aa9521-600x550.jpg",
+  }}
+/>
 ```
