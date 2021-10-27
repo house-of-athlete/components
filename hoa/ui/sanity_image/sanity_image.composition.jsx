@@ -1,9 +1,6 @@
 import React from "react"
 import { FullWidthSanityImage } from "./sanity_image"
-import {
-  MaxWidthContext,
-  useFullWidthSizes,
-} from "@hoa/hoa.ui.use_full_width_sizes"
+import { MaxWidthContext } from "@hoa/hoa.ui.use_full_width_sizes"
 
 const image = {
   _id: "image-25f8378b9852da303afa2fd2c16b4a9f83aa9521-600x550-jpg",
