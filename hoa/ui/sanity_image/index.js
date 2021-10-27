@@ -1,1 +1,5 @@
-export { SanityImage } from "./sanity_image"
+export {
+  FullWidthSanityImage,
+  ImgLoadingContext,
+  SanityImage,
+} from "./sanity_image"
