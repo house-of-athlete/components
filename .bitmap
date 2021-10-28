@@ -23,13 +23,13 @@
     },
     "ui/image_or_video": {
         "scope": "hoa.hoa",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/image_or_video"
     },
     "ui/mux_video": {
         "scope": "hoa.hoa",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/mux_video"
     },
