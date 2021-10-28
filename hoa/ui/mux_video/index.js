@@ -1,1 +1,1 @@
-export { MuxVideo } from './mux_video';
+export { MuxVideo } from "./mux_video"
