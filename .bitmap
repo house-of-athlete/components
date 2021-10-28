@@ -22,8 +22,8 @@
         "rootDir": "hoa/ui/external_link"
     },
     "ui/mux_video": {
-        "scope": "",
-        "version": "",
+        "scope": "hoa.hoa",
+        "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/mux_video"
     },
