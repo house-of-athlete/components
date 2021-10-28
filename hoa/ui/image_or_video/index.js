@@ -1,1 +1,1 @@
-export { ImageOrVideo } from './image_or_video';
+export { ImageOrVideo } from "./image_or_video"
