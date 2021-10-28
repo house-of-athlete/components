@@ -13,6 +13,7 @@ importers:
       '@types/react': ^17.0.33
       '@types/react-dom': ^17.0.10
       '@types/testing-library__jest-dom': 5.9.5
+      classnames: 2.3.1
       core-js: ^3.19.0
       hls.js: 1.0.12
       lodash: 4.17.21
@@ -22,6 +23,7 @@ importers:
     dependencies:
       '@emotion/react': registry.npmjs.org/@emotion/react/11.4.1_74cdfb704b70bfbe5b519e0c4564d995
       '@emotion/styled': registry.npmjs.org/@emotion/styled/11.3.0_5afe7e1add93e79ac3ad8093547bd1b1
+      classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.19.0
       hls.js: registry.npmjs.org/hls.js/1.0.12
       lodash: registry.npmjs.org/lodash/4.17.21
@@ -41,6 +43,9 @@ importers:
     specifiers: {}
 
   hoa/ui/external_link:
+    specifiers: {}
+
+  hoa/ui/image_or_video:
     specifiers: {}
 
   hoa/ui/mux_video:
@@ -534,6 +539,12 @@ packages:
       ansi-styles: registry.npmjs.org/ansi-styles/4.3.0
       supports-color: registry.npmjs.org/supports-color/7.2.0
     dev: true
+
+  registry.npmjs.org/classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz}
+    name: classnames
+    version: 2.3.1
+    dev: false
 
   registry.npmjs.org/color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz}
