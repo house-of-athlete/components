@@ -54,18 +54,18 @@ const Styled = styled.div`
 `
 
 const PhoneSanityImage = styled(FullWidthSanityImage)`
-  @media (min-width: ${props => props.theme.tabletMin}) {
+  @media ${tabletMQ} {
     display: none;
   }
 `
 
 const TabletSanityImage = styled(FullWidthSanityImage)`
-  @media (max-width: ${props => props.theme.phoneMax}) {
+  @media ${phoneMQ} {
     display: none;
   }
 `
 
-const ImageOrVideo = ({ image, imagePhone, video, videoPhone }) => {
+export const ImageOrVideo = ({ image, imagePhone, video, videoPhone }) => {
   const videoProp = getVideoProp({ video, videoPhone })
 
   const tabletItem = video || image
@@ -98,5 +98,3 @@ ImageOrVideo.propTypes = {
   video: PropTypes.object,
   videoPhone: PropTypes.object,
 }
-
-export default ImageOrVideo
