@@ -2,8 +2,9 @@ import PropTypes from "prop-types"
 import React, { useRef, useState } from "react"
 import { MuxVideo } from "@hoa/hoa.ui.mux_video"
 import classNames from "classnames"
+import PlayButtonOverlay from "./play_button_overlay"
 
-export const MuxVideoPlayer = ({ children, video }) => {
+export const MuxVideoPlayer = ({ video }) => {
   const videoRef = useRef()
   const [isPlaying, setIsPlaying] = useState(false)
 
@@ -27,13 +28,11 @@ export const MuxVideoPlayer = ({ children, video }) => {
         video={video}
         ref={videoRef}
       />
-
-      {!isPlaying && children}
+      {!isPlaying && <PlayButtonOverlay />}
     </div>
   )
 }
 
 MuxVideoPlayer.propTypes = {
-  children: PropTypes.node,
   video: PropTypes.object.isRequired,
 }
