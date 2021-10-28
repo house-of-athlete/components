@@ -23,9 +23,7 @@ const getAspectRatio = item => {
 }
 
 const getVideoProp = ({ video, videoPhone }) => {
-  if (video && !videoPhone) {
-    return video
-  } else if (video || videoPhone) {
+  if (video || videoPhone) {
     return [
       { video: videoPhone, media: phoneMQ },
       { video, media: tabletMQ },
