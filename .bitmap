@@ -21,5 +21,17 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/external_link"
     },
+    "ui/sanity_image": {
+        "scope": "hoa.hoa",
+        "version": "0.0.3",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/sanity_image"
+    },
+    "ui/use_full_width_sizes": {
+        "scope": "hoa.hoa",
+        "version": "0.0.1",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/use_full_width_sizes"
+    },
     "$schema-version": "14.9.0"
 }
