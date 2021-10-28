@@ -21,6 +21,12 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/external_link"
     },
+    "ui/mux_video": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/mux_video"
+    },
     "ui/sanity_image": {
         "scope": "hoa.hoa",
         "version": "0.0.3",
