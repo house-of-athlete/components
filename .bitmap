@@ -9,6 +9,12 @@
  */
 
 {
+    "ui/close_button": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/close_button"
+    },
     "ui/cms_link": {
         "scope": "hoa.hoa",
         "version": "0.0.3",
