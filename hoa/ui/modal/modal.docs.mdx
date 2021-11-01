@@ -1,22 +1,16 @@
 ---
-description: 'A Modal component.'
-labels: ['label1', 'label2', 'label3']
+description: "A Modal component."
+labels: []
 ---
 
-import { Modal } from './modal';
+import { Modal } from "./modal"
 
-## React Component for rendering text
-
-A basic div that renders some text
-
-### Component usage
-```js
-<Modal text="hello from Modal" />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
 ```js live
-<Modal text="hello from Modal" />
+<Modal
+  onClose={() => {
+    alert("Close")
+  }}
+>
+  Content goes here
+</Modal>
 ```

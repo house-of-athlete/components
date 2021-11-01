@@ -1,6 +1,12 @@
-import React from 'react';
-import { Modal } from './modal';
+import React from "react"
+import { Modal } from "./modal"
 
 export const BasicModal = () => (
-  <Modal text="hello from Modal" />
-);
+  <Modal
+    onClose={() => {
+      alert("Close")
+    }}
+  >
+    Content goes here.
+  </Modal>
+)
