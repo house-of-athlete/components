@@ -34,8 +34,8 @@
         "rootDir": "hoa/ui/mux_video"
     },
     "ui/prevent_scrolling": {
-        "scope": "",
-        "version": "",
+        "scope": "hoa.hoa",
+        "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/prevent_scrolling"
     },
