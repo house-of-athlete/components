@@ -7,6 +7,7 @@ importers:
       '@babel/runtime': 7.12.18
       '@emotion/react': 11.4.1
       '@emotion/styled': 11.3.0
+      '@sanity/block-content-to-react': 3.0.0
       '@testing-library/react': 12.0.0
       '@types/jest': ^26.0.24
       '@types/node': 12.20.4
@@ -23,6 +24,7 @@ importers:
     dependencies:
       '@emotion/react': registry.npmjs.org/@emotion/react/11.4.1_74cdfb704b70bfbe5b519e0c4564d995
       '@emotion/styled': registry.npmjs.org/@emotion/styled/11.3.0_5afe7e1add93e79ac3ad8093547bd1b1
+      '@sanity/block-content-to-react': registry.npmjs.org/@sanity/block-content-to-react/3.0.0_react@17.0.2
       classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.19.0
       hls.js: registry.npmjs.org/hls.js/1.0.12
@@ -39,7 +41,13 @@ importers:
       '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.10
       '@types/testing-library__jest-dom': registry.npmjs.org/@types/testing-library__jest-dom/5.9.5
 
+  hoa/ui/close_button:
+    specifiers: {}
+
   hoa/ui/cms_link:
+    specifiers: {}
+
+  hoa/ui/event_link:
     specifiers: {}
 
   hoa/ui/external_link:
@@ -48,13 +56,25 @@ importers:
   hoa/ui/image_or_video:
     specifiers: {}
 
+  hoa/ui/modal:
+    specifiers: {}
+
   hoa/ui/mux_video:
+    specifiers: {}
+
+  hoa/ui/prevent_scrolling:
+    specifiers: {}
+
+  hoa/ui/rich_text:
     specifiers: {}
 
   hoa/ui/sanity_image:
     specifiers: {}
 
   hoa/ui/use_full_width_sizes:
+    specifiers: {}
+
+  hoa/ui/video_modal:
     specifiers: {}
 
 packages:
@@ -314,6 +334,43 @@ packages:
       chalk: registry.npmjs.org/chalk/4.1.2
     dev: true
 
+  registry.npmjs.org/@sanity/block-content-to-hyperscript/3.0.0:
+    resolution: {integrity: sha512-uoXWLdFY5LqO8A9sFJqnZWWDCBC+0r3Egeh0bwKQ2EK2Vil5L40iJGNXMZhDB8BnvH+6B4155SU8Q3vY59T6pA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@sanity/block-content-to-hyperscript/-/block-content-to-hyperscript-3.0.0.tgz}
+    name: '@sanity/block-content-to-hyperscript'
+    version: 3.0.0
+    dependencies:
+      '@sanity/generate-help-url': registry.npmjs.org/@sanity/generate-help-url/0.140.0
+      '@sanity/image-url': registry.npmjs.org/@sanity/image-url/0.140.22
+      hyperscript: registry.npmjs.org/hyperscript/2.0.2
+      object-assign: registry.npmjs.org/object-assign/4.1.1
+    dev: false
+
+  registry.npmjs.org/@sanity/block-content-to-react/3.0.0_react@17.0.2:
+    resolution: {integrity: sha512-oHPLlIsulsnL3ITs93RIvUPBI6nAeoSFOUf16vX4T7z4wWywxP39N1DF9mAx2tV6Kjr1fJAx5GF7zfiMXYLaqA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@sanity/block-content-to-react/-/block-content-to-react-3.0.0.tgz}
+    id: registry.npmjs.org/@sanity/block-content-to-react/3.0.0
+    name: '@sanity/block-content-to-react'
+    version: 3.0.0
+    peerDependencies:
+      react: '>=15.0.0'
+    dependencies:
+      '@sanity/block-content-to-hyperscript': registry.npmjs.org/@sanity/block-content-to-hyperscript/3.0.0
+      prop-types: registry.npmjs.org/prop-types/15.7.2
+      react: registry.npmjs.org/react/17.0.2
+    dev: false
+
+  registry.npmjs.org/@sanity/generate-help-url/0.140.0:
+    resolution: {integrity: sha512-H/G/WA9S22TXcXST52CIiTsHx3S2hH0gvK7LnI5w76vfKS0obnDPh8jrPg4xeNRYGPuV9MHYRlyERGpRGoo4Qw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@sanity/generate-help-url/-/generate-help-url-0.140.0.tgz}
+    name: '@sanity/generate-help-url'
+    version: 0.140.0
+    dev: false
+
+  registry.npmjs.org/@sanity/image-url/0.140.22:
+    resolution: {integrity: sha512-CAmQZnj+KM7FSEYiWlIGDit072syicYuAw0w7R2ctMzHiZ4p9mE/g6dBnYqrqFUrw2J+GpJgPt+RVspKP8vdqA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@sanity/image-url/-/image-url-0.140.22.tgz}
+    name: '@sanity/image-url'
+    version: 0.140.22
+    engines: {node: '>=10.0.0'}
+    dev: false
+
   registry.npmjs.org/@testing-library/dom/8.2.0:
     resolution: {integrity: sha512-U8cTWENQPHO3QHvxBdfltJ+wC78ytMdg69ASvIdkGdQ/XRg4M9H2vvM3mHddxl+w/fM6NNqzGMwpQoh82v9VIA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@testing-library/dom/-/dom-8.2.0.tgz}
     name: '@testing-library/dom'
@@ -513,6 +570,12 @@ packages:
       resolve: registry.npmjs.org/resolve/1.20.0
     dev: false
 
+  registry.npmjs.org/browser-split/0.0.0:
+    resolution: {integrity: sha1-QUGcrvdpdVkp3VGJZ9PuwKYmJ3E=, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/browser-split/-/browser-split-0.0.0.tgz}
+    name: browser-split
+    version: 0.0.0
+    dev: false
+
   registry.npmjs.org/callsites/3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/callsites/-/callsites-3.1.0.tgz}
     name: callsites
@@ -539,6 +602,14 @@ packages:
       ansi-styles: registry.npmjs.org/ansi-styles/4.3.0
       supports-color: registry.npmjs.org/supports-color/7.2.0
     dev: true
+
+  registry.npmjs.org/class-list/0.1.1:
+    resolution: {integrity: sha1-m5dFGSxBebXaCg12M2WOPHDXlss=, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/class-list/-/class-list-0.1.1.tgz}
+    name: class-list
+    version: 0.1.1
+    dependencies:
+      indexof: registry.npmjs.org/indexof/0.0.1
+    dev: false
 
   registry.npmjs.org/classnames/2.3.1:
     resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz}
@@ -702,6 +773,25 @@ packages:
       react-is: registry.npmjs.org/react-is/16.13.1
     dev: false
 
+  registry.npmjs.org/html-element/2.3.1:
+    resolution: {integrity: sha512-xnFt2ZkbFcjc+JoAtg3Hl89VeEZDjododu4VCPkRvFmBTHHA9U1Nt6hLUWfW2O+6Sl/rT1hHK/PivleX3PdBJQ==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/html-element/-/html-element-2.3.1.tgz}
+    name: html-element
+    version: 2.3.1
+    engines: {node: '>=4.2'}
+    dependencies:
+      class-list: registry.npmjs.org/class-list/0.1.1
+    dev: false
+
+  registry.npmjs.org/hyperscript/2.0.2:
+    resolution: {integrity: sha1-ODnLpFVUvf4nu4HCFC0WhPgTWvU=, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/hyperscript/-/hyperscript-2.0.2.tgz}
+    name: hyperscript
+    version: 2.0.2
+    dependencies:
+      browser-split: registry.npmjs.org/browser-split/0.0.0
+      class-list: registry.npmjs.org/class-list/0.1.1
+      html-element: registry.npmjs.org/html-element/2.3.1
+    dev: false
+
   registry.npmjs.org/import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.0.tgz}
     name: import-fresh
@@ -710,6 +800,12 @@ packages:
     dependencies:
       parent-module: registry.npmjs.org/parent-module/1.0.1
       resolve-from: registry.npmjs.org/resolve-from/4.0.0
+    dev: false
+
+  registry.npmjs.org/indexof/0.0.1:
+    resolution: {integrity: sha1-gtwzbSMrkGIXnQWrMpOmYFn9Q10=, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/indexof/-/indexof-0.0.1.tgz}
+    name: indexof
+    version: 0.0.1
     dev: false
 
   registry.npmjs.org/is-arrayish/0.2.1:
