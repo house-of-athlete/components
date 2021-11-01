@@ -9,11 +9,23 @@
  */
 
 {
+    "ui/close_button": {
+        "scope": "hoa.hoa",
+        "version": "0.0.2",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/close_button"
+    },
     "ui/cms_link": {
         "scope": "hoa.hoa",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/cms_link"
+    },
+    "ui/event_link": {
+        "scope": "hoa.hoa",
+        "version": "0.0.1",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/event_link"
     },
     "ui/external_link": {
         "scope": "hoa.hoa",
@@ -27,11 +39,23 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/image_or_video"
     },
+    "ui/modal": {
+        "scope": "hoa.hoa",
+        "version": "0.0.2",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/modal"
+    },
     "ui/mux_video": {
         "scope": "hoa.hoa",
         "version": "0.0.8",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/mux_video"
+    },
+    "ui/prevent_scrolling": {
+        "scope": "hoa.hoa",
+        "version": "0.0.2",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/prevent_scrolling"
     },
     "ui/sanity_image": {
         "scope": "hoa.hoa",
@@ -44,6 +68,12 @@
         "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/use_full_width_sizes"
+    },
+    "ui/video_modal": {
+        "scope": "hoa.hoa",
+        "version": "0.0.1",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/video_modal"
     },
     "$schema-version": "14.9.0"
 }

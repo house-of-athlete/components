@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { ExternalLink } from "@hoa/hoa.ui.external_link"
+import { VideoModalLink } from "@hoa/hoa.ui.video_modal"
 import { isFunction, pick } from "lodash"
 
 const getComponentAndProps = link => {
@@ -16,6 +17,9 @@ const getComponentAndProps = link => {
       }
 
       return CMSLink.getInternalLink(link)
+
+    case "videoModalLink":
+      return [VideoModalLink, { video: link.video }]
 
     default:
       throw new Error(`unknown link object: ${JSON.stringify(link)}`)

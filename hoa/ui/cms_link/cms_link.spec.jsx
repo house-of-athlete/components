@@ -1,7 +1,7 @@
 import React from "react"
 import { render } from "@testing-library/react"
 import { CMSLink } from "./cms_link"
-import { RedExternalLink } from "./cms_link.composition"
+import { BasicVideoModalLink, RedExternalLink } from "./cms_link.composition"
 
 CMSLink.getInternalLink = link => [
   props => <a {...props} />,
@@ -50,4 +50,8 @@ it("should render RedExternalLink", () => {
   expect(rendered.href).toEqual("http://example.com/")
   expect(rendered.rel).toEqual("noopener noreferrer")
   expect(rendered.target).toEqual("_blank")
+})
+
+it("should render BasicVideoModalLink", () => {
+  render(<BasicVideoModalLink />)
 })
