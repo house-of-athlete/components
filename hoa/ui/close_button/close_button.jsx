@@ -23,7 +23,7 @@ export const CloseButton = ({ className, onClick }) => (
       >
         <g
           transform="translate(0.000000, 1.000000)"
-          fill="var(--close-button-color, purple)"
+          fill="var(--hoa-close-button-color, purple)"
           fillRule="nonzero"
           id="Rectangle"
         >
