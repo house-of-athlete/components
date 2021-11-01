@@ -26,3 +26,19 @@ export const ExternalLinkWithRenderProps = () => (
     {props => <BoldLink {...props}>Bold External Link</BoldLink>}
   </CMSLink>
 )
+
+export const BasicVideoModalLink = () => (
+  <CMSLink
+    link={{
+      _type: "videoModalLink",
+      video: {
+        _type: "mux.videoAsset",
+        data: { aspect_ratio: "1024:473" },
+        playbackId: "GM01ihvcrnrjUx02dcVYe26vLDWuWUN00f9dhOGo6Pg00vY",
+        thumbTime: 4.621051,
+      },
+    }}
+  >
+    Video Link
+  </CMSLink>
+)
