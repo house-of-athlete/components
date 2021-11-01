@@ -40,8 +40,8 @@
         "rootDir": "hoa/ui/image_or_video"
     },
     "ui/modal": {
-        "scope": "",
-        "version": "",
+        "scope": "hoa.hoa",
+        "version": "0.0.2",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/modal"
     },
