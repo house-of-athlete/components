@@ -1,9 +1,9 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import { BasicVideoModal } from "./video_modal.composition"
+import { BasicVideoModalLink } from "./video_modal.composition"
 
-it("should render with the correct text", () => {
-  const { getByText } = render(<BasicVideoModal />)
-  const rendered = getByText("hello from VideoModal")
+it("should render link", () => {
+  const { getByText } = render(<BasicVideoModalLink />)
+  const rendered = getByText("Click here to open video in modal")
   expect(rendered).toBeTruthy()
 })
