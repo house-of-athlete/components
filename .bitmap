@@ -39,6 +39,12 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/image_or_video"
     },
+    "ui/modal": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/modal"
+    },
     "ui/mux_video": {
         "scope": "hoa.hoa",
         "version": "0.0.8",
