@@ -1,1 +1,1 @@
-export { PreventScrolling } from './prevent_scrolling';
+export { PreventScrolling } from "./prevent_scrolling"
