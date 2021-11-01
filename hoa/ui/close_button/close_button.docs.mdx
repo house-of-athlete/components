@@ -8,5 +8,9 @@ import { CloseButton } from "./close_button"
 A close button. Set the color with the CSS variable `--close-button-color`.
 
 ```js live
-<CloseButton />
+<CloseButton
+  onClick={() => {
+    alert("Close")
+  }}
+/>
 ```
