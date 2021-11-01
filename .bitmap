@@ -15,6 +15,12 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/cms_link"
     },
+    "ui/event_link": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/event_link"
+    },
     "ui/external_link": {
         "scope": "hoa.hoa",
         "version": "0.0.2",
