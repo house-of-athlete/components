@@ -70,7 +70,7 @@
         "rootDir": "hoa/ui/use_full_width_sizes"
     },
     "ui/video_modal": {
-        "scope": "",
+        "scope": "hoa.hoa",
         "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/video_modal"
