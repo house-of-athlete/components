@@ -33,6 +33,12 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/mux_video"
     },
+    "ui/prevent_scrolling": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/prevent_scrolling"
+    },
     "ui/sanity_image": {
         "scope": "hoa.hoa",
         "version": "0.0.4",
