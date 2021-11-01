@@ -10,8 +10,8 @@
 
 {
     "ui/close_button": {
-        "scope": "",
-        "version": "",
+        "scope": "hoa.hoa",
+        "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/close_button"
     },
@@ -47,7 +47,7 @@
     },
     "ui/prevent_scrolling": {
         "scope": "hoa.hoa",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/prevent_scrolling"
     },
