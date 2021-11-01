@@ -57,6 +57,12 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/prevent_scrolling"
     },
+    "ui/rich_text": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/rich_text"
+    },
     "ui/sanity_image": {
         "scope": "hoa.hoa",
         "version": "0.0.4",
