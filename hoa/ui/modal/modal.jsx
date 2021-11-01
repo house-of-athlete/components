@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React from "react"
 import { CloseButton } from "@hoa/hoa.ui.close_button"
 import { PreventScrolling } from "@hoa/hoa.ui.prevent_scrolling"
