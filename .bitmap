@@ -71,7 +71,7 @@
     },
     "ui/video_modal": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/video_modal"
     },
