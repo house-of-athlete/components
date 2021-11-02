@@ -4,9 +4,9 @@ labels: []
 ---
 
 import { CMSLink } from "./cms_link"
-CMSLink.getInternalLink = link => [
+CMSLink.getInternalLink = document => [
   props => <a {...props} />,
-  { href: link.document.path.current, children: "Internal Link" },
+  { href: document.path.current, children: "Internal Link" },
 ]
 
 ## Configuration
@@ -18,7 +18,7 @@ links in your project. Here is an example configuration for use with Gatsby:
 import { Link } from "gatsby"
 import { CMSLink } from "@hoa/hoa.ui.cms_link"
 
-CMSLink.getInternalLink = link => [Link, { to: link.document.path.current }]
+CMSLink.getInternalLink = document => [Link, { to: document.path.current }]
 ```
 
 ## Component usage
