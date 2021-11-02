@@ -16,7 +16,7 @@ const getComponentAndProps = link => {
         )
       }
 
-      return CMSLink.getInternalLink(link)
+      return CMSLink.getInternalLink(link.document)
 
     case "videoModalLink":
       return [VideoModalLink, { video: link.video }]

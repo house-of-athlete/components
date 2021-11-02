@@ -3,9 +3,9 @@ import { render } from "@testing-library/react"
 import { CMSLink } from "./cms_link"
 import { BasicVideoModalLink, RedExternalLink } from "./cms_link.composition"
 
-CMSLink.getInternalLink = link => [
+CMSLink.getInternalLink = document => [
   props => <a {...props} />,
-  { href: link.document.path.current, children: "Internal Link" },
+  { href: document.path.current, children: "Internal Link" },
 ]
 
 it("should render CMSLink with internal link", () => {
