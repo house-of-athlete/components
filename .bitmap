@@ -17,7 +17,7 @@
     },
     "ui/cms_link": {
         "scope": "hoa.hoa",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/cms_link"
     },
