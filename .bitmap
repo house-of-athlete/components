@@ -17,7 +17,7 @@
     },
     "ui/cms_link": {
         "scope": "hoa.hoa",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/cms_link"
     },
@@ -35,7 +35,7 @@
     },
     "ui/image_by_text": {
         "scope": "hoa.hoa",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/image_by_text"
     },
@@ -65,7 +65,7 @@
     },
     "ui/rich_text": {
         "scope": "hoa.hoa",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/rich_text"
     },
