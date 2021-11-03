@@ -75,16 +75,6 @@ const brandonBlocks = [
   },
 ]
 
-// export const BasicRichText = () => (
-//   <RichText
-//     blocks={brandonBlocks}
-//     sanityConfig={{
-//       dataset: "production",
-//       projectId: "s7bcqajt",
-//     }}
-//   />
-// )
-
 export const BasicStyledRichText = () => (
   <StyledRichText
     blocks={brandonBlocks}
