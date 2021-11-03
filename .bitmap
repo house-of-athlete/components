@@ -33,6 +33,12 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/external_link"
     },
+    "ui/image_by_text": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/image_by_text"
+    },
     "ui/image_or_video": {
         "scope": "hoa.hoa",
         "version": "0.0.10",
