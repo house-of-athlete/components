@@ -1,5 +1,5 @@
 import React from "react"
-import { RichText, StyledRichText } from "./rich_text"
+import { StyledRichText } from "./rich_text"
 
 const brandonBlocks = [
   {
