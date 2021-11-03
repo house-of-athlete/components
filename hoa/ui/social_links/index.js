@@ -1,1 +1,1 @@
-export { SocialLinks } from './social_links';
+export { SocialLinks } from "./social_links"
