@@ -1,4 +1,5 @@
 import React from "react"
+import { blockContentProjection } from "./index"
 import { StyledRichText } from "./rich_text"
 
 const brandonBlocks = [
@@ -84,3 +85,5 @@ export const BasicStyledRichText = () => (
     }}
   />
 )
+
+export const ExportedProjection = () => <pre>{blockContentProjection}</pre>
