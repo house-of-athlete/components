@@ -59,7 +59,7 @@
     },
     "ui/rich_text": {
         "scope": "hoa.hoa",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/rich_text"
     },
