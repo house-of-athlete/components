@@ -1,6 +1,6 @@
 import React from "react"
 import { blockContentProjection } from "./index"
-import { StyledRichText } from "./rich_text"
+import { RichTextConfigProvider, StyledRichText } from "./rich_text"
 
 const brandonBlocks = [
   {
@@ -77,13 +77,14 @@ const brandonBlocks = [
 ]
 
 export const BasicStyledRichText = () => (
-  <StyledRichText
-    blocks={brandonBlocks}
+  <RichTextConfigProvider
     sanityConfig={{
       dataset: "production",
       projectId: "s7bcqajt",
     }}
-  />
+  >
+    <StyledRichText blocks={brandonBlocks} />
+  </RichTextConfigProvider>
 )
 
 export const ExportedProjection = () => <pre>{blockContentProjection}</pre>

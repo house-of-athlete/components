@@ -1,6 +1,6 @@
 import BlockContent from "@sanity/block-content-to-react"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { createContext, useContext } from "react"
 import styled from "@emotion/styled"
 import BlockRenderer from "./serializers/BlockRenderer"
 import InternalLinkSerializer from "./serializers/InternalLinkSerializer"
@@ -22,7 +22,22 @@ const serializers = {
   },
 }
 
-export const RichText = ({ blocks, className, sanityConfig }) => {
+const RichTextConfigContext = createContext()
+
+export const RichTextConfigProvider = ({ children, sanityConfig }) => (
+  <RichTextConfigContext.Provider value={sanityConfig}>
+    {children}
+  </RichTextConfigContext.Provider>
+)
+
+RichTextConfigProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+  sanityConfig: PropTypes.object.isRequired,
+}
+
+export const RichText = ({ blocks, className }) => {
+  const sanityConfig = useContext(RichTextConfigContext)
+
   return (
     <BlockContent
       blocks={blocks}
@@ -38,7 +53,6 @@ export const RichText = ({ blocks, className, sanityConfig }) => {
 RichText.propTypes = {
   blocks: PropTypes.array.isRequired,
   className: PropTypes.string,
-  sanityConfig: PropTypes.object.isRequired,
 }
 
 const Styled = styled.div`
