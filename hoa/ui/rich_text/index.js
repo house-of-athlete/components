@@ -1,1 +1,1 @@
-export { RichText } from './rich_text';
+export { RichText } from "./rich_text"
