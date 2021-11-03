@@ -58,8 +58,8 @@
         "rootDir": "hoa/ui/prevent_scrolling"
     },
     "ui/rich_text": {
-        "scope": "",
-        "version": "",
+        "scope": "hoa.hoa",
+        "version": "0.0.1",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/rich_text"
     },
