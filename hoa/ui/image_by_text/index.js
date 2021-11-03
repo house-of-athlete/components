@@ -1,1 +1,1 @@
-export { ImageByText } from './image_by_text';
+export { ImageByText } from "./image_by_text"
