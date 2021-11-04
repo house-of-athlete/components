@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
 import { MuxVideo } from "@hoa/hoa.ui.mux_video"
-import { FullWidthSanityImage } from "@hoa/hoa.ui.sanity_image"
+import { SanityImage } from "@hoa/hoa.ui.sanity_image"
 
 const phoneMQ = `(max-width: 767px)`
 const tabletMQ = `(min-width: 768px)` // Tailwind "md"
@@ -51,13 +51,18 @@ const Styled = styled.div`
   }
 `
 
-const PhoneSanityImage = styled(FullWidthSanityImage)`
+const StyledSanityImage = styled(SanityImage)`
+  display: block;
+  object-fit: cover;
+`
+
+const PhoneSanityImage = styled(StyledSanityImage)`
   @media ${tabletMQ} {
     display: none;
   }
 `
 
-const TabletSanityImage = styled(FullWidthSanityImage)`
+const TabletSanityImage = styled(StyledSanityImage)`
   @media ${phoneMQ} {
     display: none;
   }
