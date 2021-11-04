@@ -63,7 +63,13 @@ const TabletSanityImage = styled(FullWidthSanityImage)`
   }
 `
 
-export const ImageOrVideo = ({ image, imagePhone, video, videoPhone }) => {
+export const ImageOrVideo = ({
+  className,
+  image,
+  imagePhone,
+  video,
+  videoPhone,
+}) => {
   const videoProp = getVideoProp({ video, videoPhone })
 
   const tabletItem = video || image
@@ -71,6 +77,7 @@ export const ImageOrVideo = ({ image, imagePhone, video, videoPhone }) => {
 
   return (
     <Styled
+      className={className}
       phoneAR={getAspectRatio(phoneItem)}
       tabletAR={getAspectRatio(tabletItem)}
     >
@@ -91,6 +98,7 @@ export const ImageOrVideo = ({ image, imagePhone, video, videoPhone }) => {
 }
 
 ImageOrVideo.propTypes = {
+  className: PropTypes.string,
   image: PropTypes.object,
   imagePhone: PropTypes.object,
   video: PropTypes.object,

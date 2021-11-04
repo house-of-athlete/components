@@ -41,7 +41,7 @@
     },
     "ui/image_or_video": {
         "scope": "hoa.hoa",
-        "version": "0.0.10",
+        "version": "0.0.11",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/image_or_video"
     },
