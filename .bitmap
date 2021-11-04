@@ -17,7 +17,7 @@
     },
     "ui/cms_link": {
         "scope": "hoa.hoa",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/cms_link"
     },
@@ -35,7 +35,7 @@
     },
     "ui/image_by_text": {
         "scope": "hoa.hoa",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/image_by_text"
     },
@@ -44,12 +44,6 @@
         "version": "0.0.10",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/image_or_video"
-    },
-    "ui/modal": {
-        "scope": "hoa.hoa",
-        "version": "0.0.3",
-        "mainFile": "index.js",
-        "rootDir": "hoa/ui/modal"
     },
     "ui/mux_video": {
         "scope": "hoa.hoa",
@@ -65,7 +59,7 @@
     },
     "ui/rich_text": {
         "scope": "hoa.hoa",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/rich_text"
     },
@@ -89,7 +83,7 @@
     },
     "ui/video_modal": {
         "scope": "hoa.hoa",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/video_modal"
     },
