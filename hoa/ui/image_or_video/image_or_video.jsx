@@ -34,9 +34,10 @@ const getVideoProp = ({ video, videoPhone }) => {
 const Styled = styled.div`
   position: relative;
 
-  > * {
+  > video {
     height: 100%;
     left: 0;
+    object-fit: cover;
     position: absolute;
     top: 0;
     width: 100%;
@@ -53,7 +54,9 @@ const Styled = styled.div`
 
 const StyledSanityImage = styled(SanityImage)`
   display: block;
+  height: 100%;
   object-fit: cover;
+  width: 100%;
 `
 
 const PhoneSanityImage = styled(StyledSanityImage)`
@@ -81,13 +84,15 @@ export const ImageOrVideo = ({
   const phoneItem = videoPhone || imagePhone || tabletItem
 
   return (
-    <Styled
-      className={className}
-      phoneAR={getAspectRatio(phoneItem)}
-      tabletAR={getAspectRatio(tabletItem)}
-    >
+    <>
       {videoProp && (
-        <MuxVideo autoPlay muted loop playsInline video={videoProp} />
+        <Styled
+          className={className}
+          phoneAR={getAspectRatio(phoneItem)}
+          tabletAR={getAspectRatio(tabletItem)}
+        >
+          <MuxVideo autoPlay muted loop playsInline video={videoProp} />
+        </Styled>
       )}
 
       {/* both phone and tablet images downloaded; could be optimized with <picture> element */}
@@ -98,7 +103,7 @@ export const ImageOrVideo = ({
       {tabletItem._type === "sanity.imageAsset" && (
         <TabletSanityImage image={tabletItem} />
       )}
-    </Styled>
+    </>
   )
 }
 
