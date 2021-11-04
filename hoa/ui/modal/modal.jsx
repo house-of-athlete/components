@@ -9,11 +9,12 @@ export const Modal = ({ children, onClose }) => (
 
     <div className="fixed flex flex-col inset-0 justify-center p-6 z-50">
       <div
-        className="absolute inset-0 -z-1"
+        className="absolute inset-0"
         onClick={onClose}
         style={{
           backgroundColor: "var(--hoa-modal-backdrop-color, black)",
           opacity: "var(--hoa-modal-backdrop-opacity, 0.5)",
+          zIndex: "-1",
         }}
       />
 
