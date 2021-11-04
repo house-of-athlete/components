@@ -35,7 +35,6 @@ const Styled = styled.div`
   position: relative;
 
   > video {
-    height: 100%;
     left: 0;
     object-fit: cover;
     position: absolute;
@@ -54,7 +53,6 @@ const Styled = styled.div`
 
 const StyledSanityImage = styled(SanityImage)`
   display: block;
-  height: 100%;
   object-fit: cover;
   width: 100%;
 `
@@ -72,12 +70,14 @@ const TabletSanityImage = styled(StyledSanityImage)`
 `
 
 export const ImageOrVideo = ({
-  className,
+  fullHeight,
   image,
   imagePhone,
   video,
   videoPhone,
 }) => {
+  const heightClass = fullHeight ? "h-full" : "h-auto"
+
   const videoProp = getVideoProp({ video, videoPhone })
 
   const tabletItem = video || image
@@ -87,28 +87,35 @@ export const ImageOrVideo = ({
     <>
       {videoProp && (
         <Styled
-          className={className}
+          className={heightClass}
           phoneAR={getAspectRatio(phoneItem)}
           tabletAR={getAspectRatio(tabletItem)}
         >
-          <MuxVideo autoPlay muted loop playsInline video={videoProp} />
+          <MuxVideo
+            className={heightClass}
+            autoPlay
+            muted
+            loop
+            playsInline
+            video={videoProp}
+          />
         </Styled>
       )}
 
       {/* both phone and tablet images downloaded; could be optimized with <picture> element */}
       {phoneItem._type === "sanity.imageAsset" && (
-        <PhoneSanityImage image={phoneItem} />
+        <PhoneSanityImage className={heightClass} image={phoneItem} />
       )}
 
       {tabletItem._type === "sanity.imageAsset" && (
-        <TabletSanityImage image={tabletItem} />
+        <TabletSanityImage className={heightClass} image={tabletItem} />
       )}
     </>
   )
 }
 
 ImageOrVideo.propTypes = {
-  className: PropTypes.string,
+  fullHeight: PropTypes.bool,
   image: PropTypes.object,
   imagePhone: PropTypes.object,
   video: PropTypes.object,
