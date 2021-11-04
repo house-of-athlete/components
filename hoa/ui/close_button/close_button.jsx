@@ -9,6 +9,7 @@ export const CloseButton = ({ className, onClick }) => (
     onClick={onClick}
   >
     <svg
+      className="max-w-full"
       width="18px"
       height="18px"
       viewBox="0.9751065969467163 1.024845004081726 16.056758880615234 15.943411827087402"
