@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-// import pageComponentToReact from "../../lib/pageComponentToReact"
 import { CMSLink } from "@hoa/hoa.ui.cms_link"
 import { ImageOrVideo } from "@hoa/hoa.ui.image_or_video"
+import { isFunction } from "lodash"
 
 const Styled = styled.div`
   height: ${({ $height }) => $height || "auto"};
@@ -65,14 +65,6 @@ const verticalFlex = position => {
   }
 }
 
-const renderComponent = pageComponent => {
-  // const Component = pageComponentToReact(pageComponent)
-  // return <Component {...pageComponent} />
-
-  // FIXME
-  return <>Content coming soon</>
-}
-
 export const Banner = ({
   backgroundLink,
   content,
@@ -80,6 +72,7 @@ export const Banner = ({
   contentPositionVertical,
   height,
   imageOrVideo,
+  renderComponent,
 }) => {
   const ContentWrapper = imageOrVideo ? Overlay : Content
 
@@ -89,7 +82,7 @@ export const Banner = ({
 
       {backgroundLink && <BackgroundLink link={backgroundLink} />}
 
-      {content && (
+      {content && isFunction(renderComponent) && (
         <ContentWrapper
           $horizontalFlex={horizontalFlex(contentPositionHorizontal)}
           $verticalFlex={verticalFlex(contentPositionVertical)}
@@ -112,4 +105,5 @@ Banner.propTypes = {
   contentPositionVertical: PropTypes.string,
   height: PropTypes.string,
   imageOrVideo: PropTypes.object,
+  renderComponent: PropTypes.func,
 }
