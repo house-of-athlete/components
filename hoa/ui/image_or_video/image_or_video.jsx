@@ -25,12 +25,18 @@ const getAspectRatio = item => {
 }
 
 const getVideoProp = ({ phoneItem, tabletItem }) => {
-  if (isVideo(phoneItem) || isVideo(tabletItem)) {
-    return [
-      { video: phoneItem, media: phoneMQ },
-      { video: tabletItem, media: tabletMQ },
-    ].filter(i => isVideo(i.video))
+  if (!isVideo(phoneItem) && !isVideo(tabletItem)) {
+    return
   }
+
+  if (phoneItem._id === tabletItem._id) {
+    return phoneItem
+  }
+
+  return [
+    { video: phoneItem, media: phoneMQ },
+    { video: tabletItem, media: tabletMQ },
+  ].filter(i => isVideo(i.video))
 }
 
 const Styled = styled.div`
