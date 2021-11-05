@@ -45,7 +45,6 @@ const Styled = styled.div`
 
   > img,
   > video {
-    display: block;
     left: 0;
     object-fit: cover;
     position: absolute;
@@ -63,12 +62,16 @@ const Styled = styled.div`
 `
 
 const PhoneSanityImage = styled(SanityImage)`
+  display: block;
+
   @media ${tabletMQ} {
     display: none;
   }
 `
 
 const TabletSanityImage = styled(SanityImage)`
+  display: block;
+
   @media ${phoneMQ} {
     display: none;
   }
