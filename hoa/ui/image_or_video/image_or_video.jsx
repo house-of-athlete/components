@@ -3,6 +3,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { MuxVideo } from "@hoa/hoa.ui.mux_video"
 import { SanityImage } from "@hoa/hoa.ui.sanity_image"
+import { isEqual } from "lodash"
 
 const phoneMQ = `(max-width: 767px)`
 const tabletMQ = `(min-width: 768px)` // Tailwind "md"
@@ -29,7 +30,7 @@ const getVideoProp = ({ phoneItem, tabletItem }) => {
     return
   }
 
-  if (phoneItem._id === tabletItem._id) {
+  if (isEqual(phoneItem, tabletItem)) {
     return phoneItem
   }
 
