@@ -7,6 +7,8 @@ import { SanityImage } from "@hoa/hoa.ui.sanity_image"
 const phoneMQ = `(max-width: 767px)`
 const tabletMQ = `(min-width: 768px)` // Tailwind "md"
 
+const isVideo = item => item && item._type === "mux.videoAsset"
+
 const getAspectRatio = item => {
   switch (item._type) {
     case "sanity.imageAsset":
@@ -22,19 +24,21 @@ const getAspectRatio = item => {
   }
 }
 
-const getVideoProp = ({ video, videoPhone }) => {
-  if (video || videoPhone) {
+const getVideoProp = ({ phoneItem, tabletItem }) => {
+  if (isVideo(phoneItem) || isVideo(tabletItem)) {
     return [
-      { video: videoPhone, media: phoneMQ },
-      { video, media: tabletMQ },
-    ].filter(i => i.video)
+      { video: phoneItem, media: phoneMQ },
+      { video: tabletItem, media: tabletMQ },
+    ].filter(i => isVideo(i.video))
   }
 }
 
 const Styled = styled.div`
   position: relative;
 
+  > img,
   > video {
+    display: block;
     left: 0;
     object-fit: cover;
     position: absolute;
@@ -51,19 +55,13 @@ const Styled = styled.div`
   }
 `
 
-const StyledSanityImage = styled(SanityImage)`
-  display: block;
-  object-fit: cover;
-  width: 100%;
-`
-
-const PhoneSanityImage = styled(StyledSanityImage)`
+const PhoneSanityImage = styled(SanityImage)`
   @media ${tabletMQ} {
     display: none;
   }
 `
 
-const TabletSanityImage = styled(StyledSanityImage)`
+const TabletSanityImage = styled(SanityImage)`
   @media ${phoneMQ} {
     display: none;
   }
@@ -78,28 +76,26 @@ export const ImageOrVideo = ({
 }) => {
   const heightClass = fullHeight ? "h-full" : "h-auto"
 
-  const videoProp = getVideoProp({ video, videoPhone })
-
   const tabletItem = video || image
   const phoneItem = videoPhone || imagePhone || tabletItem
 
+  const videoProp = getVideoProp({ phoneItem, tabletItem })
+
   return (
-    <>
+    <Styled
+      className={heightClass}
+      phoneAR={getAspectRatio(phoneItem)}
+      tabletAR={getAspectRatio(tabletItem)}
+    >
       {videoProp && (
-        <Styled
+        <MuxVideo
           className={heightClass}
-          phoneAR={getAspectRatio(phoneItem)}
-          tabletAR={getAspectRatio(tabletItem)}
-        >
-          <MuxVideo
-            className={heightClass}
-            autoPlay
-            muted
-            loop
-            playsInline
-            video={videoProp}
-          />
-        </Styled>
+          autoPlay
+          muted
+          loop
+          playsInline
+          video={videoProp}
+        />
       )}
 
       {/* both phone and tablet images downloaded; could be optimized with <picture> element */}
@@ -110,7 +106,7 @@ export const ImageOrVideo = ({
       {tabletItem._type === "sanity.imageAsset" && (
         <TabletSanityImage className={heightClass} image={tabletItem} />
       )}
-    </>
+    </Styled>
   )
 }
 
