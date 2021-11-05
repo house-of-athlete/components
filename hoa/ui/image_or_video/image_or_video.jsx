@@ -3,6 +3,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { MuxVideo } from "@hoa/hoa.ui.mux_video"
 import { SanityImage } from "@hoa/hoa.ui.sanity_image"
+import { isEqual } from "lodash"
 
 const phoneMQ = `(max-width: 767px)`
 const tabletMQ = `(min-width: 768px)` // Tailwind "md"
@@ -25,12 +26,18 @@ const getAspectRatio = item => {
 }
 
 const getVideoProp = ({ phoneItem, tabletItem }) => {
-  if (isVideo(phoneItem) || isVideo(tabletItem)) {
-    return [
-      { video: phoneItem, media: phoneMQ },
-      { video: tabletItem, media: tabletMQ },
-    ].filter(i => isVideo(i.video))
+  if (!isVideo(phoneItem) && !isVideo(tabletItem)) {
+    return
   }
+
+  if (isEqual(phoneItem, tabletItem)) {
+    return phoneItem
+  }
+
+  return [
+    { video: phoneItem, media: phoneMQ },
+    { video: tabletItem, media: tabletMQ },
+  ].filter(i => isVideo(i.video))
 }
 
 const Styled = styled.div`
