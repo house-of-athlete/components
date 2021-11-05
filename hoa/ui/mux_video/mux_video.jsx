@@ -83,7 +83,7 @@ export const MuxVideo = React.forwardRef(
       }
     }, [video])
 
-    const poster = getPoster(activeVideo, props)
+    const poster = getPoster(activeVideo, { autoPlay })
 
     useEffect(() => {
       if (!activeVideo) {
