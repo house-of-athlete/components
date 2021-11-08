@@ -1,5 +1,9 @@
 import React from "react"
-import { MaxWidthContext, useFullWidthSizes } from "./useFullWidthSizes"
+import {
+  MaxWidthContext,
+  SizesContext,
+  useFullWidthSizes,
+} from "./useFullWidthSizes"
 
 const PrintSizes = () => <pre>{useFullWidthSizes()}</pre>
 
@@ -12,3 +16,9 @@ export const SizesIn800pxContainer = () => {
     </MaxWidthContext.Provider>
   )
 }
+
+export const SizesWithProvidedSizes = () => (
+  <SizesContext.Provider value="(max-width: 1023px) 33.3336vw, (max-width: 1280px) 25vw, 320px">
+    <PrintSizes />
+  </SizesContext.Provider>
+)

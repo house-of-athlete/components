@@ -1,1 +1,5 @@
-export { MaxWidthContext, useFullWidthSizes } from "./useFullWidthSizes"
+export {
+  MaxWidthContext,
+  SizesContext,
+  useFullWidthSizes,
+} from "./useFullWidthSizes"
