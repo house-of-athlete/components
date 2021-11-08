@@ -20,7 +20,7 @@ const ItemOverlay = styled.div`
   bottom: 0;
   color: white;
   font-size: 1.125rem;
-  font-weight: var(--weight-slight-bold);
+  font-weight: var(--hoa-grid-overlay-font-weight, normal);
   left: 0;
   padding: 15px 20px;
   pointer-events: none;
@@ -44,10 +44,10 @@ GridItem.propTypes = {
 }
 
 const Styled = styled(ResponsiveGrid)`
-  column-gap: var(--grid-gap);
+  column-gap: var(--hoa-grid-column-gap, 1rem);
   display: grid;
   grid-template-columns: repeat(var(--grid-columns), 1fr);
-  row-gap: var(--grid-gap);
+  row-gap: var(--hoa-grid-row-gap, 1rem);
 `
 
 export const Grid = ({ items, phoneColumnCount, tabletColumnCount }) => (
