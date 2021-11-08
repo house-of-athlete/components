@@ -1,1 +1,1 @@
-export { Preview } from './preview';
+export { arraySelect, arraySelectValue } from "./preview"
