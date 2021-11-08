@@ -63,6 +63,12 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/prevent_scrolling"
     },
+    "ui/responsive_grid": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/responsive_grid"
+    },
     "ui/rich_text": {
         "scope": "hoa.hoa",
         "version": "0.0.12",
