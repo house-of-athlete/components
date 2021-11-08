@@ -39,6 +39,12 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/external_link"
     },
+    "ui/grid": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/ui/grid"
+    },
     "ui/image_by_text": {
         "scope": "hoa.hoa",
         "version": "0.0.10",
