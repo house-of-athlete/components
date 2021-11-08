@@ -9,6 +9,12 @@
  */
 
 {
+    "sanity/preview": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.js",
+        "rootDir": "hoa/sanity/preview"
+    },
     "ui/banner": {
         "scope": "hoa.hoa",
         "version": "0.0.7",
