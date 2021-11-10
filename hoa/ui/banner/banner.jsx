@@ -3,7 +3,8 @@ import React from "react"
 import styled from "@emotion/styled"
 import { CMSLink } from "@hoa/hoa.ui.cms_link"
 import { ImageOrVideo } from "@hoa/hoa.ui.image_or_video"
-import { isFunction } from "lodash"
+import { ButtonRow } from "./sub_components/button_row"
+import { CustomizableText } from "./sub_components/customizable_text"
 
 const Styled = styled.div`
   height: ${({ $height }) => $height || "auto"};
@@ -65,6 +66,21 @@ const verticalFlex = position => {
   }
 }
 
+const renderComponent = pageComponent => {
+  const { _type } = pageComponent
+
+  switch (_type) {
+    case "ButtonRow":
+      return <ButtonRow {...pageComponent} />
+
+    case "CustomizableText":
+      return <CustomizableText {...pageComponent} />
+
+    default:
+      throw new Error(`No component registered for _type == ${_type}`)
+  }
+}
+
 export const Banner = ({
   backgroundLink,
   content,
@@ -72,7 +88,6 @@ export const Banner = ({
   contentPositionVertical,
   height,
   imageOrVideo,
-  renderComponent,
 }) => {
   const ContentWrapper = imageOrVideo ? Overlay : Content
 
@@ -82,7 +97,7 @@ export const Banner = ({
 
       {backgroundLink && <BackgroundLink link={backgroundLink} />}
 
-      {content && isFunction(renderComponent) && (
+      {content && (
         <ContentWrapper
           $horizontalFlex={horizontalFlex(contentPositionHorizontal)}
           $verticalFlex={verticalFlex(contentPositionVertical)}
@@ -105,5 +120,4 @@ Banner.propTypes = {
   contentPositionVertical: PropTypes.string,
   height: PropTypes.string,
   imageOrVideo: PropTypes.object,
-  renderComponent: PropTypes.func,
 }

@@ -19,8 +19,7 @@ const props = {
           _type: "internalLinkButton",
           document: {
             _type: "customInternalLink",
-            link: "/apparel/collection-2",
-            path: null,
+            path: { current: "/apparel/collection-2" },
           },
           text: "Collection 2",
           theme: "darkOnLight",

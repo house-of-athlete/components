@@ -1,15 +1,35 @@
 import PropTypes from "prop-types"
 import React from "react"
+import { EventLink } from "@hoa/hoa.ui.event_link"
 import { ExternalLink } from "@hoa/hoa.ui.external_link"
 import { VideoModalLink } from "@hoa/hoa.ui.video_modal"
 import { isFunction, pick } from "lodash"
 
 const getComponentAndProps = link => {
   switch (link?._type) {
+    case "actionLink":
+    case "actionButton":
+      if (!isFunction(CMSLink.performAction)) {
+        throw new Error(
+          `CMSLink.performAction not set; see https://bit.dev/hoa/hoa/ui/cms_link`
+        )
+      }
+
+      return [
+        EventLink,
+        {
+          onClick: () => {
+            CMSLink.performAction(link.action)
+          },
+        },
+      ]
+
     case "externalLink":
+    case "externalLinkButton":
       return [ExternalLink, { href: link.url }]
 
     case "internalLink":
+    case "internalLinkButton":
       if (!isFunction(CMSLink.getInternalLink)) {
         throw new Error(
           `CMSLink.getInternalLink not set; see https://bit.dev/hoa/hoa/ui/cms_link`
