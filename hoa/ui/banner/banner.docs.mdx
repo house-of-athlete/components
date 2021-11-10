@@ -6,13 +6,3 @@ labels: []
 import { Banner } from "./banner"
 
 A banner component. See compositions for examples.
-
-In order to support the `content` prop, a `renderComponent` prop must be a function that renders
-the content components. Here is an example from https://houseofathlete.com:
-
-```js
-const renderComponent = pageComponent => {
-  const Component = pageComponentToReact(pageComponent)
-  return <Component {...pageComponent} />
-}
-```
