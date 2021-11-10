@@ -17,7 +17,7 @@
     },
     "ui/banner": {
         "scope": "hoa.hoa",
-        "version": "0.0.9",
+        "version": "0.0.10",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/banner"
     },
@@ -29,7 +29,7 @@
     },
     "ui/cms_link": {
         "scope": "hoa.hoa",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/cms_link"
     },
@@ -47,13 +47,13 @@
     },
     "ui/grid": {
         "scope": "hoa.hoa",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/grid"
     },
     "ui/image_by_text": {
         "scope": "hoa.hoa",
-        "version": "0.0.11",
+        "version": "0.0.12",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/image_by_text"
     },
@@ -83,7 +83,7 @@
     },
     "ui/rich_text": {
         "scope": "hoa.hoa",
-        "version": "0.0.15",
+        "version": "0.0.16",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/rich_text"
     },
