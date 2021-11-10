@@ -4,6 +4,9 @@ labels: []
 ---
 
 import { CMSLink } from "./cms_link"
+CMSLink.performAction = action => {
+  alert(`received action: ${action}`)
+}
 CMSLink.getInternalLink = document => [
   props => <a {...props} />,
   { href: document.path.current, children: "Internal Link" },
@@ -12,11 +15,16 @@ CMSLink.getInternalLink = document => [
 ## Configuration
 
 You will need to configure the `getInternalLink` function, which is used to generate internal
-links in your project. Here is an example configuration for use with Gatsby:
+links in your project. Additionally, you'll need to configure `performAction` if you want to
+support action links. Here is an example configuration for use with Gatsby:
 
 ```js
 import { Link } from "gatsby"
 import { CMSLink } from "@hoa/hoa.ui.cms_link"
+
+CMSLink.performAction = action => {
+  alert(`received action: ${action}`)
+}
 
 CMSLink.getInternalLink = document => [Link, { to: document.path.current }]
 ```
@@ -24,6 +32,20 @@ CMSLink.getInternalLink = document => [Link, { to: document.path.current }]
 ## Component usage
 
 See compositions for examples of styling links and using render props.
+
+### Action Link
+
+```js live
+<CMSLink
+  link={{
+    _key: "e2d5a7edc3e6",
+    _type: "actionLink",
+    action: "bookingDialog",
+  }}
+>
+  Action Link
+</CMSLink>
+```
 
 ### External Link
 
