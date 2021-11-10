@@ -18,7 +18,7 @@ export const bannerProjection = `{
         ...,
 
         _type == "internalLinkButton" => {
-          doc -> ${internalLinkProjection},
+          document -> ${internalLinkProjection},
         },
       },
     },

@@ -17,7 +17,7 @@ const props = {
         {
           _key: "f627f14c5ea1",
           _type: "internalLinkButton",
-          doc: {
+          document: {
             _type: "customInternalLink",
             link: "/apparel/collection-2",
             path: null,
