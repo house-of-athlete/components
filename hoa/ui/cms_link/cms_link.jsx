@@ -7,9 +7,11 @@ import { isFunction, pick } from "lodash"
 const getComponentAndProps = link => {
   switch (link?._type) {
     case "externalLink":
+    case "externalLinkButton":
       return [ExternalLink, { href: link.url }]
 
     case "internalLink":
+    case "internalLinkButton":
       if (!isFunction(CMSLink.getInternalLink)) {
         throw new Error(
           `CMSLink.getInternalLink not set; see https://bit.dev/hoa/hoa/ui/cms_link`
