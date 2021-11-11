@@ -9,10 +9,6 @@ const DefaultStyles = styled.div`
   line-height: 1.5;
   margin: 0 auto;
   text-align: center;
-
-  p {
-    margin: 0;
-  }
 `
 
 const PhoneContainer = styled(DefaultStyles)`
