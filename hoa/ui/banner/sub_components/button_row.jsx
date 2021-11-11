@@ -16,6 +16,10 @@ const Styled = styled.div`
     grid-auto-flow: ${({ gridAutoFlowPhone }) => gridAutoFlowPhone};
   }
 
+  @media (max-width: 413px) {
+    grid-auto-flow: row;
+  }
+
   @media (min-width: ${props => props.theme.tabletMin}) {
     grid-auto-flow: column;
   }

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { RichText } from "@hoa/hoa.ui.rich_text"
+import { StyledRichText } from "@hoa/hoa.ui.rich_text"
 
 const DefaultStyles = styled.div`
   font-size: 1.0625rem;
@@ -9,10 +9,6 @@ const DefaultStyles = styled.div`
   line-height: 1.5;
   margin: 0 auto;
   text-align: center;
-
-  p {
-    margin: 0;
-  }
 `
 
 const PhoneContainer = styled(DefaultStyles)`
@@ -41,11 +37,11 @@ export const CustomizableText = ({
   return (
     <>
       <PhoneContainer style={{ ...commonStyle, ...phoneStyle }}>
-        <RichText blocks={content} />
+        <StyledRichText blocks={content} />
       </PhoneContainer>
 
       <TabletContainer style={{ ...commonStyle, ...tabletStyle }}>
-        <RichText blocks={content} />
+        <StyledRichText blocks={content} />
       </TabletContainer>
     </>
   )

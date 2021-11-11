@@ -51,6 +51,10 @@ const ImageContainer = styled.div`
 
 const RichTextContainer = styled.div`
   margin-top: 15px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
 `
 
 export const ImageByText = ({
