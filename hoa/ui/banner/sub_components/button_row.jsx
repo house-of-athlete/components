@@ -8,16 +8,19 @@ import { kebabCase } from "lodash"
 const Styled = styled.div`
   column-gap: 16px;
   display: grid;
+  grid-auto-columns: minmax(185px, auto);
   justify-content: center;
   row-gap: 10px;
 
   @media (max-width: ${props => props.theme.phoneMax}) {
-    grid-auto-columns: minmax(165px, auto);
     grid-auto-flow: ${({ gridAutoFlowPhone }) => gridAutoFlowPhone};
   }
 
+  @media (max-width: 413px) {
+    grid-auto-flow: row;
+  }
+
   @media (min-width: ${props => props.theme.tabletMin}) {
-    grid-auto-columns: minmax(185px, auto);
     grid-auto-flow: column;
   }
 `

@@ -17,7 +17,7 @@
     },
     "ui/banner": {
         "scope": "hoa.hoa",
-        "version": "0.0.15",
+        "version": "0.0.16",
         "mainFile": "index.js",
         "rootDir": "hoa/ui/banner"
     },
