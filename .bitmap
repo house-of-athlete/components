@@ -45,12 +45,6 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/image_by_text"
     },
-    "ui/image_or_video": {
-        "scope": "hoa.hoa",
-        "version": "0.0.21",
-        "mainFile": "index.js",
-        "rootDir": "hoa/ui/image_or_video"
-    },
     "ui/mux_video": {
         "scope": "hoa.hoa",
         "version": "0.0.9",
