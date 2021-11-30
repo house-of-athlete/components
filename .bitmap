@@ -21,12 +21,6 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/event_link"
     },
-    "ui/mux_video": {
-        "scope": "hoa.hoa",
-        "version": "0.0.9",
-        "mainFile": "index.js",
-        "rootDir": "hoa/ui/mux_video"
-    },
     "ui/prevent_scrolling": {
         "scope": "hoa.hoa",
         "version": "0.0.2",
