@@ -21,12 +21,6 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/close_button"
     },
-    "ui/cms_link": {
-        "scope": "hoa.hoa",
-        "version": "0.0.14",
-        "mainFile": "index.js",
-        "rootDir": "hoa/ui/cms_link"
-    },
     "ui/event_link": {
         "scope": "hoa.hoa",
         "version": "0.0.1",
