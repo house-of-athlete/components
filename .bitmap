@@ -15,12 +15,6 @@
         "mainFile": "index.js",
         "rootDir": "hoa/sanity/preview"
     },
-    "ui/close_button": {
-        "scope": "hoa.hoa",
-        "version": "0.0.3",
-        "mainFile": "index.js",
-        "rootDir": "hoa/ui/close_button"
-    },
     "ui/event_link": {
         "scope": "hoa.hoa",
         "version": "0.0.1",
