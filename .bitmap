@@ -51,11 +51,5 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/use_full_width_sizes"
     },
-    "ui/video_modal": {
-        "scope": "hoa.hoa",
-        "version": "0.0.5",
-        "mainFile": "index.js",
-        "rootDir": "hoa/ui/video_modal"
-    },
     "$schema-version": "14.9.0"
 }
