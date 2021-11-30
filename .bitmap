@@ -57,12 +57,6 @@
         "mainFile": "index.js",
         "rootDir": "hoa/ui/responsive_grid"
     },
-    "ui/rich_text": {
-        "scope": "hoa.hoa",
-        "version": "0.0.17",
-        "mainFile": "index.js",
-        "rootDir": "hoa/ui/rich_text"
-    },
     "ui/sanity_image": {
         "scope": "hoa.hoa",
         "version": "0.0.8",
