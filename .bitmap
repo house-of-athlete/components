@@ -15,11 +15,5 @@
         "mainFile": "index.js",
         "rootDir": "hoa/sanity/preview"
     },
-    "ui/use_full_width_sizes": {
-        "scope": "hoa.hoa",
-        "version": "0.0.5",
-        "mainFile": "index.js",
-        "rootDir": "hoa/ui/use_full_width_sizes"
-    },
     "$schema-version": "14.9.0"
 }
